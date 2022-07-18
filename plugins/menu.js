@@ -34,7 +34,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 
   let tags
   let teks = `${args[0]}`.toLowerCase()
-  let arrayMenu = ['all', 'game', 'xp', 'Sticker', 'kerangajaib', 'quotes', 'admin', 'grup', 'premium', 'internet', 'anonymous', 'downloader', 'tools', 'fun', 'database', 'quran', 'audio', 'jadian', 'info', 'tanpakategori', 'owner']
+  let arrayMenu = ['all', 'game', 'xp', 'Sticker', 'kerangajaib', 'quotes', 'admin', 'grup', 'premium', 'internet', 'anonymous', 'downloader', 'tools', 'fun', 'database', 'quran', 'audio', 'jadian', 'info', 'tanpakategori', 'owner', 'mods']
   if (!arrayMenu.includes(teks)) teks = '404'
   if (teks == 'all') tags = {
     'main': 'UTAMA',
@@ -57,6 +57,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     'audio': 'Pengubah Suara',
     'info': 'Info',
     'owner': 'Owner',
+    'mods': 'Moderator',
     '': 'Tanpa Kategori',
   }
   if (teks == 'game') tags = {
@@ -117,8 +118,9 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   }
   if (teks == 'owner') tags = {
     'owner': 'Owner',
-    'host': 'Host',
-    'advanced': 'Advanced'
+  }
+  if (teks == 'mods') tags = {
+    'mods': 'Moderator',
   }
 
 

@@ -12,6 +12,6 @@ handler.help = ['delprem [@user]']
 handler.tags = ['owner']
 handler.command = /^(-|del)p(rem)?$/i
 
-handler.rowner = true
+handler.mods = true
 
 module.exports = handler

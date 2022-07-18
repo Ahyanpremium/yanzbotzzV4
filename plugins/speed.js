@@ -10,7 +10,7 @@ let format = sizeFormatter({
 })
 let handler = async (m, { conn, usedPrefix }) => {
   await m.reply('_Testing speed..._')
-  await conn.delay(2000)
+  await conn.delay(100)
   const chats = Object.keys(await conn.chats)
   const groupsIn = chats.filter(id => id.endsWith('@g.us')) //groups.filter(v => !v.read_only)
   const used = process.memoryUsage()
