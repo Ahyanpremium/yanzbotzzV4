@@ -9,7 +9,7 @@ let handler = async (m, { usedPrefix, command, text }) => {
     m.reply(`berhasil!\n*${user.name}* sekarang bukan premium!`)
 }
 handler.help = ['delprem [@user]']
-handler.tags = ['owner']
+handler.tags = ['mods']
 handler.command = /^(-|del)p(rem)?$/i
 
 handler.mods = true

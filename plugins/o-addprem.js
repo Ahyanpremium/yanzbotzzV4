@@ -15,7 +15,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     m.reply(`Berhasil!\n*${user.name}* sekarang sudah premium ${txt} hari.\n\ncountdown: ${conn.msToDate(user.premiumTime - now)}`)
 }
 handler.help = ['addprem [@user] <hari>']
-handler.tags = ['owner']
+handler.tags = ['mods']
 handler.command = /^(add|tambah|\+)p(rem)?$/i
 
 handler.mods = true
